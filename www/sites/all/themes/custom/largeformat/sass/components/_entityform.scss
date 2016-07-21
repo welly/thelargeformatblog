@@ -1,0 +1,34 @@
+.block--entityform-block {
+  margin: {
+    bottom: 5em;
+    top: -5em;
+  }
+  @extend .cf;
+  @include breakpoint($mobile + 1) {
+    @include add-grid(4 10 3);
+    @include add-gutter(1/4);
+  }
+  .content {
+    @include breakpoint($mobile + 1) {
+      @include grid-span(1, 2);
+    }
+  }
+  .entityform {
+    @include rem(font-size, $font-size-normal);
+  }
+  .form-text {
+    padding: 0.5em;
+    @include rem(font-size, $font-size-normal);
+  }
+  .form-textarea {
+    padding: 0.5em;
+    @include rem(font-size, $font-size-normal);
+  }
+  .form-item__label {
+    font-family: $secondary-font-family;
+  }
+  .button--submit {
+    font-family: $secondary-font-family;
+    @include rem(font-size, $font-size-normal);
+  }
+}

@@ -1,0 +1,10 @@
+// @file
+
+.region-preface {
+  @include cf();
+  .signpost {
+    @include breakpoint($mobile + 1) {
+      @include col(1/3);
+    }
+  }
+}

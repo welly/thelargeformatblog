@@ -1,0 +1,22 @@
+/**
+ * @file
+ */
+
+/**
+ * Remove vertical spacing from nested lists.
+ */
+li{
+  > ul,
+  > ol{
+    margin-bottom:0;
+  }
+}
+
+.region--main {
+  ol {
+    li {
+      list-style-type: decimal;
+      margin-bottom: $half-spacing-unit;
+    }
+  }
+}

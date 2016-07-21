@@ -1,0 +1,47 @@
+// @file
+// Styles for a view.
+
+.view {}
+
+.view__filters {
+  margin-bottom: 0;
+}
+
+.view--front-page-promoted {
+  padding: {
+    top: em(75px);
+  }
+  .button {
+    background-color: $primary-color;
+    @include rem(font-size, $font-size-md);
+  }
+  .entity__summary {
+    color: $secondary-text-color;
+    line-height: 28px;
+    margin: 0 auto em(23px) auto;
+    width: 50%;
+  }
+  .entity__title {
+    color: $primary-color;
+    line-height: $font-size-xxxl + 10;
+    margin: 0 auto em(26px, $font-size-xxxl) auto;
+    text-transform: uppercase;
+    width: 85%;
+    @include rem(font-size, $font-size-xxxl);
+  }
+  .node--page {
+    background: {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    color: white;
+    margin: 0 auto;
+    padding: {
+      bottom: em(40px);
+      top: em(47px);
+    }
+    text-align: center;
+    width: 62%;
+  }
+  .wrapper {
+  }
+}

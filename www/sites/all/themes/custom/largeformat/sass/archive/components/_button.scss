@@ -1,0 +1,25 @@
+// @file
+// Styles for buttons.
+
+@mixin button {
+  background-color: $secondary-color;
+  color: white;
+  display: inline-block;
+  font-family: $header-font-family;
+  padding: em(16px) em(20px);
+  text-transform: uppercase;
+  @include chrome-font-fix();
+  @include rem(font-size, 1.6rem);
+}
+.button {
+  @include button;
+  @include breakpoint($mobile + 1) {
+    padding: em(24px) em(32px);
+  }
+}
+
+.mobile-button {
+  @include breakpoint(max-width $mobile) {
+    @include button;
+  }
+}

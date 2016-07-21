@@ -1,0 +1,130 @@
+// @file
+// Styles for the main menu.
+
+.main-menu {
+  font-family: $header-font-family;
+  @include breakpoint(max-width $mobile) {
+    background-color: $primary-color;
+    bottom: 0;
+    color: white;
+    left: 0;
+    position: fixed;
+    width: 100%;
+  }
+  @include breakpoint($mobile + 1) {
+    float: left;
+  }
+  @include cf();
+  @include chrome-font-fix();
+}
+
+.main-menu--toggle {
+  display: block;
+  text-align: right;
+  margin-top: 6px;
+  &:before {
+    color: white;
+    content: "\2261";
+    line-height: 1em;
+    padding: {
+      right: em(12px, 40px);
+    }
+    @include rem(font-size, 4rem);
+  }
+  span { display: none; }
+  @include breakpoint($mobile + 1) {
+    display: none;
+  }
+}
+
+.nav--main-menu {
+  @include breakpoint(max-width $mobile) {
+    border-top: 1px solid white;
+    display: none;
+    padding: 1em;
+    .nav__link {
+      border-bottom: 1px solid white;
+      color: white;
+      display: block;
+      padding: em(14px) 0;
+    }
+  }
+  @include breakpoint($mobile + 1) {
+    .nav__item {
+      border-right: 1px solid $menu-border-colour;
+      display: table;
+      float: left;
+      font-size: em(15px);
+      height: em(117px, 15px);
+      line-height: em(20px, 15px);
+      padding: {
+        left: em(22px, 15px);
+        right: em(32px, 15px);
+        top: em(20px, 15px);
+      }
+      text-transform: uppercase;
+    }
+    .nav__link {
+      background: {
+        repeat: no-repeat;
+        position: top left;
+      }
+      bottom: 0;
+      color: $menu-link-colour;
+      display: table-cell;
+      height: 100%;
+      padding: {
+        bottom: em(10px, 15px);
+      }
+      vertical-align: bottom;
+    }
+    .nav__item--first {
+      border-left: 1px solid $menu-border-colour;
+      margin: {
+        left: em(32px, 15px);
+      }
+    }
+    .nav__item--choose {
+      .nav__link {
+      background: {
+        image: url('../images/icon-choose.png')
+      }
+        width: em(135px, 15px);
+      }
+    }
+    .nav__item--secure {
+      .nav__link {
+        background: {
+          image: url('../images/icon-secure.png')
+        }
+        width: em(105px, 15px);
+      }
+    }
+    .nav__item--extra {
+      .nav__link {
+        background: {
+          image: url('../images/icon-extra.png')
+        }
+        width: em(78px, 15px);
+      }
+    }
+    .nav__item--location {
+      .nav__link {
+        background: {
+          image: url('../images/icon-location.png')
+        }
+        width: em(78px, 15px);
+      }
+    }
+    .nav__item--quote {
+      background-color: $tertiary-color;
+      .nav__link {
+        background: {
+          image: url('../images/icon-quote.png')
+        }
+        color: white;
+        width: em(105px, 15px);
+      }
+    }
+  }
+}

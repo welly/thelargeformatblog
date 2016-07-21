@@ -1,0 +1,40 @@
+.page-portfolio {
+  .region--main {
+    @include clearfix;
+    .content {
+      margin: {
+        top: 8em;
+      }
+    }
+    .content {
+      padding: 0 1em;
+    }
+    @include breakpoint($mobile + 1) {
+      @include add-grid(4 10 3);
+      @include add-gutter(1/4);
+      .content {
+        @include grid-span(1, 2);
+      }
+    }
+  }
+  .page-title {
+    font-family: $secondary-font-family;
+    margin-bottom: $base-spacing-unit;
+    @include rem(font-size, $font-size-xl);
+  }
+}
+
+.post--portfolio {
+	.post__content {
+		padding: {
+			top: 1em;
+		}
+	}
+	.layout-grid__column {
+		float: left;
+		margin-right: 1em;
+	}
+    .layout-grid__column--last {
+        margin-right: 0;
+    }
+}

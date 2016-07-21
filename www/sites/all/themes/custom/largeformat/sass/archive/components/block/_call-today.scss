@@ -1,0 +1,40 @@
+// @file
+
+.block-call-today {
+  color: $primary-color;
+  font-family: $header-font-family;
+  text-transform: uppercase;
+  @include chrome-font-fix;
+  @include rem(font-size, $font-size-lg);
+  @include breakpoint(max-width $mobile) {
+    margin-bottom: 1em;
+    .block__title {
+      display: none;
+    }
+    .mobile-button {
+      background-color: $tertiary-color;
+    }
+    .mobile-only {
+      display: block;
+    }
+    .wrapper {
+      text-align: center;
+    }
+  }
+  @include breakpoint($mobile + 1) {
+    float: left;
+    padding: {
+      left: em(22px, 20px);
+      top: em(36px, 20px);
+    }
+    .block__title {
+      margin-bottom: em(7px, 20px);
+    }
+    .mobile-only {
+      display: none;
+    }
+    .mobile-button {
+      color: $tertiary-color;
+    }
+  }
+}

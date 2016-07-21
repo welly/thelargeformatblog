@@ -1,0 +1,39 @@
+// @file
+// Styles for layout elements
+
+.region-navigation,
+.region-highlighted .content,
+.region-preface,
+.region-main .content,
+.region-postscript .content,
+.region-footer {
+  @include center($max-page-width, 1em);
+  @include cf();
+}
+
+.region-navigation {
+  @include breakpoint($mobile + 1) {
+    height: em(117px);
+  }
+}
+
+.region-main {
+  @include breakpoint(max-width $mobile) {
+    display: none;
+  }
+}
+
+.region-postscript {
+  background-color: $primary-color;
+  color: white;
+  @include breakpoint(max-width $mobile) {
+  }
+}
+
+.region-footer {
+  @include breakpoint(max-width $mobile) {
+    padding-bottom: em(50px);
+  }
+}
+
+@import 'region/*';

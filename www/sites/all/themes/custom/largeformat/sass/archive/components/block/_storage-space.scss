@@ -1,0 +1,126 @@
+// @file
+
+.block--storage-spaces {
+  .wrapper {
+    text-align: center;
+  }
+  .block__title {
+    color: $secondary-color;
+    text-transform: uppercase;
+    @include rem(font-size, 2rem);
+  }
+  .bean__title {
+    text-align: center;
+    @include breakpoint($mobile + 1) {
+      margin-bottom: em(53px, $font-size-xxl);
+      @include rem(font-size, $font-size-xxl);
+    }
+  }
+  @include breakpoint(max-width $mobile) {
+    padding: 1em 0;
+  }
+  @include breakpoint($mobile + 1) {
+    padding: {
+      top: em(64px);
+    }
+    .button {
+      margin: {
+        bottom: em(70px, $font-size-md);
+      }
+      @include rem(font-size, $font-size-md);
+    }
+  }
+}
+
+.storage-promo__content {
+  @include cf();
+}
+
+.storage-promo {
+  background: {
+    position: top right;
+    repeat: no-repeat;
+  }
+  margin: {
+    bottom: em(24px);
+  }
+  @include breakpoint($mobile + 1) {
+    margin: {
+      bottom: em(36px);
+    }
+    min-height: em(250px);
+    @include col(1/3);
+  }
+}
+.storage-promo__title {
+  background: {
+    position: center left;
+    repeat: no-repeat;
+    size: contain;
+  }
+  margin-bottom: em(10px, 20px);
+  padding: {
+    bottom: 0.5em;
+    left: em(50px, 20px);
+    right: 0;
+    top: 0.5em;
+  };
+  @include breakpoint($mobile + 1) {
+    background: {
+      position: top left;
+      size: auto;
+    }
+    padding: {
+      top: em(72px, 20px);
+      left: 0;
+    }
+  }
+}
+
+.storage-promo__text {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  @include breakpoint($mobile + 1) {
+    width: em(175px);
+  }
+  @include chrome-font-fix();
+}
+
+.storage-promo--small {
+  @include breakpoint($mobile + 1) {
+    background: {
+      image: url('../images/grid-small-space.png');
+    }
+  }
+  .storage-promo__title {
+    background: {
+      image: url('../images/icon-storage-small.png');
+    }
+  }
+}
+
+.storage-promo--medium {
+  @include breakpoint($mobile + 1) {
+    background: {
+      image: url('../images/grid-medium-space.png');
+    }
+  }
+  .storage-promo__title {
+    background: {
+      image: url('../images/icon-storage-medium.png');
+    }
+  }
+}
+
+.storage-promo--large {
+  @include breakpoint($mobile + 1) {
+    background: {
+      image: url('../images/grid-large-space.png');
+    }
+  }
+  .storage-promo__title {
+    background: {
+      image: url('../images/icon-storage-large.png');
+    }
+  }
+}

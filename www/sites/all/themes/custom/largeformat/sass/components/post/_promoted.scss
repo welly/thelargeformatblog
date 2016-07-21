@@ -1,0 +1,105 @@
+.post--promoted {
+  background-color: #333;
+  display: block;
+  padding: {
+    bottom: 10%;
+  }
+  @include breakpoint($mobile + 1 $desktop - 1) {
+    background-image: none !important;
+  }
+  @include breakpoint(max-width $desktop - 1) {
+    padding: 0 1em;
+  }
+  @include breakpoint($desktop) {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 1000px;
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto 3em auto;
+    overflow: hidden;
+    &:before {
+      content: "";
+      display: block;
+      padding-bottom: 50%;
+      width: 100%;
+    }
+
+    &.twentyfive:before {
+      padding-bottom: 25%;
+    }
+    &.thirty:before {
+      padding-bottom: 30%;
+    }
+    &.forty:before {
+      padding-bottom: 40%;
+    }
+    &.fifty:before {
+      padding-bottom: 50%;
+    }
+    &.seventyfive:before {
+      padding-bottom: 75%;
+    }
+    .post__overlay {
+      background: rgba(0, 0, 0, 0.4);
+      height: 100%;
+      left: 0;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      transition: all 0.7s;
+      width: 100%;
+    }
+  }
+  .post__byline {
+    color: white;
+  }
+  .post__contents {
+    @include breakpoint($desktop) {
+      left: 0;
+      position: absolute;
+      top: 5em;
+      z-index: 90;
+      @include grid-span(1, 2);
+    }
+  }
+  .post__header {
+    margin: 0 auto;
+    padding: {
+      top: 2em;
+    }
+    @include breakpoint($desktop) {
+      padding: {
+        top: 4em;
+      }
+    }
+  }
+  .post__title {
+    text-transform: uppercase;
+    a {
+      color: white;
+      &:hover {
+        color: $color__orange--active;
+      }
+    }
+    @include breakpoint(max-width $mobile) {
+      @include rem(font-size, $font-size-lg);
+      line-height: ($line-height-ratio - .25);
+    }
+    @include breakpoint($mobile + 1) {
+      @include rem(font-size, $font-size-xxl);
+      line-height: ($line-height-ratio - .25);
+    }
+  }
+  .post__summary {
+    color: white;
+    font-family: $secondary-font-family;
+    margin: 0 auto;
+    padding: 1em 0;
+    @include rem(font-size, $font-size-md);
+    @include breakpoint($mobile + 1) {
+      @include rem(font-size, $font-size-normal);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/**
+ * @file partials/global/helpers/_typography.scss
+ *
+ * @brief Typography related helper mixins, variables etc.
+ *
+ */
+
+
+@mixin font-face($family, $src, $style: normal, $weight: normal) {
+    @font-face {
+        font-family: $family;
+        src: url('#{$src}.eot'); // IE9 compat
+        src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+        url('#{$src}.woff') format('woff'), // standards
+        url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+        url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+        font-style: $style;
+        font-weight: $weight;
+    }
+}
+
+// @each $font, $fontProps in $fonts {
+//     @include font-face(map-get($fontProps, family), map-get($fontProps, src), map-get($fontProps, font-style), map-get($fontProps, font-weight));
+// }
+
+@mixin chrome-font-fix {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

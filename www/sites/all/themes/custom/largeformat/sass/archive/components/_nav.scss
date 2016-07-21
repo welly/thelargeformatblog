@@ -1,0 +1,118 @@
+// @file
+// Styles for navigation lists.
+
+.nav {
+  list-style: none;
+  padding: 0;
+}
+
+// Extendable inline nav style.
+%nav--inline {
+  > .nav__item {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+// Extendable pillbox nav style.
+%nav--pillbox {
+  @include clearfix;
+
+  .nav__item {
+    border-right: 1px solid white;
+    display: block;
+    float: left;
+    margin: 0;
+  }
+
+  .nav__link {
+    background-color: $primary-color;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    height: 38px;
+    letter-spacing: .1rem;
+    line-height: 40px;
+    padding: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:focus,
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 10%);
+      color: #FFF;
+      outline: 0;
+    }
+
+    &:active {
+      background-color: darken($pillbox-bg-color, 10%);
+      border-color: darken($pillbox-bg-color, 30%);
+    }
+  }
+
+  .is-active > .nav__link {
+    background-color: darken($pillbox-bg-color, 50%);
+    color: lighten($pillbox-bg-color, 50%);
+    font-weight: bold;
+
+    &:focus {
+      background-color: darken($pillbox-bg-color, 70%);
+    }
+
+    &:hover {
+      border-color: darken($pillbox-bg-color, 60%);
+    }
+
+    &:active {
+      background-color: darken($pillbox-bg-color, 80%);
+    }
+  }
+
+  > .nav__item:first-child > .nav__link {
+    border-top-left-radius: $global-radius;
+    border-bottom-left-radius: $global-radius;
+  }
+
+  > .nav__item:last-child {
+    border-right: 0;
+    & > .nav__link {
+      border-top-right-radius: $global-radius $global-radius;
+      border-bottom-right-radius: $global-radius $global-radius;
+    }
+  }
+}
+
+// Extendable pipeline nav style.
+%nav--pipeline {
+  @include clearfix;
+
+  .nav__item {
+    border-right: 1px solid $pipeline-border-color;
+    display: block;
+    float: left;
+    margin-right: 0.75em;
+    padding-right: 0.75em;
+
+    &:last-child {
+      border-right: 0;
+      margin-right: 0;
+      padding-right: 0;
+
+    }
+  }
+
+  .is-active > .nav__link {
+    font-weight: bold;
+  }
+}
+
+// Custom nav styles imported via sass globbing.
+@import 'nav/nav--main-menu';
+@import 'nav/nav--primary-local-tasks';
+@import 'nav/nav--secondary-local-tasks';

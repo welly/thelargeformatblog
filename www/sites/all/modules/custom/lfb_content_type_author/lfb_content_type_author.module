@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content Type: Author feature.
+ */
+
+include_once 'lfb_content_type_author.features.inc';

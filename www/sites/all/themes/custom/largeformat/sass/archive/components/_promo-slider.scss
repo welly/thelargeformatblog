@@ -1,0 +1,46 @@
+// @file
+// Styles for Promo Slider
+
+.view--promo-slider {
+  @include breakpoint($mobile + 1) {
+    margin: {
+      top: em(115px);
+    }
+    @include col(4/10);
+    @include shift(6/10);
+  }
+}
+
+
+.node--promo-slider {
+  padding: 1em 0;
+  text-align: center;
+  @include breakpoint($mobile + 1) {
+    .wrapper {
+      text-align: right;
+    }
+  }
+}
+
+.promo-slider__title {
+  text-align: center;
+  @include rem(font-size, $font-size-lg);
+  text-transform: uppercase;
+  @include breakpoint($mobile + 1) {
+    line-height: $font-size-xxl;
+    text-align: right;
+    @include rem(font-size, $font-size-xxl);
+  }
+}
+
+.promo-slider__body {
+  margin-bottom: 1em;
+  @include breakpoint($mobile + 1) {
+    text-align: right;
+  }
+}
+.promo-slider__link {
+  display: inline-block;
+  text-align: center;
+}
+

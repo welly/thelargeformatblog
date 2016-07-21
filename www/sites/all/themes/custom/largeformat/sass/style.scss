@@ -1,0 +1,46 @@
+/**
+ * @file styles.scss
+ *
+ * @brief Main sass file, responsible for imports
+ *
+ */
+
+/**
+ * Imports.
+ */
+
+// Third party libraries
+@import 'sassy-maps';
+@import 'memo';
+@import 'breakpoint';
+@import "singularitygs";
+// @import 'vendor/jeet.gs/scss/jeet/index';
+
+/**
+ * Utilities
+ */
+@import 'utils/mixins';
+@import 'utils/reset';
+@import 'utils/clearfix';
+@import 'utils/fonts';
+@import 'utils/helper';
+@import 'utils/defaults';
+// @import 'utils/base-spacing';
+// @import 'utils/colours';
+
+/**
+ * Base
+ */
+@import 'base/*';
+
+/**
+ * Components
+ */
+@import 'components/*';
+
+/**
+ * Layout
+ */
+@import 'layout/*';
+
+/*# sourceMappingURL=style.css.map */

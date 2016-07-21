@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content Type: Portfolio feature.
+ */
+
+include_once 'lfb_content_type_portfolio.features.inc';

@@ -1,0 +1,56 @@
+// @file
+
+.contact--list {
+  list-style-type: none;
+  @include breakpoint($mobile + 1) {
+    @include cf();
+  }
+}
+
+.contact-item {
+  background: {
+    position: center left;
+    repeat: no-repeat;
+  }
+  color: $secondary-text-color;
+  font-family: $header-font-family;
+  padding: {
+    bottom: 0.5em;
+    left: em(40px);
+    right: 0;
+    top: 0.5em;
+  }
+  @include breakpoint($mobile + 1) {
+    padding: {
+      left: em(30px, $font-size-md);
+    }
+    @include chrome-font-fix();
+    @include span(1/4);
+    @include rem(font-size, $font-size-md);
+  }
+}
+
+.contact-item__link {
+  color: $secondary-text-color;
+}
+
+.contact__tel {
+  background: {
+    image: url('../images/icon-contact-tel.png');
+  }
+}
+.contact__email {
+  background: {
+    image: url('../images/icon-contact-email.png');
+  }
+}
+.contact__address {
+  background: {
+    image: url('../images/icon-contact-address.png');
+  }
+}
+.contact__facebook {
+  background: {
+    image: url('../images/icon-contact-facebook.png');
+  }
+}

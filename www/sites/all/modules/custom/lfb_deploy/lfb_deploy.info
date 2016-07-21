@@ -1,0 +1,3 @@
+name = LFB deploy
+description = Deploy the LFB website
+core = 7.x

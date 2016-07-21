@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Common Contexts feature.
+ */
+
+include_once 'lfb_common_contexts.features.inc';

@@ -1,0 +1,90 @@
+// Default print styles
+@media print {
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  iframe,
+  nav {
+    display: none;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a[href]:after {
+    content: " <" attr(href) ">";
+    font-family: $base-font-family;
+    font-size: 10pt;
+    font-weight: normal;
+    text-transform: lowercase;
+  }
+
+  // Uncomment and replace example.com with your site's domain.
+  //a[href^="/"]:after {
+  //  content: " <http://example.com" attr(href) ">";
+  //}
+
+  a[href^="javascript:"]:after,
+  a[href^="mailto:"]:after,
+  a[href^="tel:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  blockquote,
+  pre {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  img,
+  tr,
+  ul {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  h1 a:after,
+  h2 a:after,
+  h3 a:after,
+  h4 a:after,
+  h5 a:after,
+  h6 a:after {
+    display: inline-block;
+  }
+
+  h2,
+  h3,
+  h4,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3,
+  h4 {
+    page-break-after: avoid;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}

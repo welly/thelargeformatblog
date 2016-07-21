@@ -1,0 +1,23 @@
+.branding {
+  font-family: $secondary-font-family;
+  text-transform: uppercase;
+  text-align: center;
+}
+.site-title {
+  padding: {
+    bottom: 1em;
+    top: 1em;
+  }
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  img {
+//    height: em(120px);
+//    width: auto;
+  }
+  span {
+    display: none;
+  }
+}

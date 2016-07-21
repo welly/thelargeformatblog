@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Initial and incremental deployment of this website.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function lfb_deploy_install() {
+  for ($i = 7001; $i < 8000; $i++) {
+    $candidate = 'lfb_deploy_update_' . $i;
+    if (function_exists($candidate)) {
+      $candidate();
+    }
+  }
+}
+
+/**
+ * Enable lfb_content_type_portfolio feature.
+ */
+function lfb_deploy_update_7001() {
+	module_enable('lfb_content_type_portfolio');
+}

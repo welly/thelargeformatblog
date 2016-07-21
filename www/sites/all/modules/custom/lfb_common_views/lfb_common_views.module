@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Common Views feature.
+ */
+
+include_once 'lfb_common_views.features.inc';

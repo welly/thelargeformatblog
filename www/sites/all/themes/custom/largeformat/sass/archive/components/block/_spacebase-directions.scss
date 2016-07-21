@@ -1,0 +1,41 @@
+// @file
+
+.block--largeformat-directions {
+  background: {
+    color: $primary-color;
+  }
+  padding-bottom: 0.5em;
+  .signpost__title {
+    background: {
+      color: darken($primary-color, 10%);
+      image: url('../images/icon-signpost-location.png');
+    }
+  }
+  .button--submit {
+    border: 0;
+    line-height: $base-line-height;
+    margin: 0;
+    text-align: center !important;
+    @include breakpoint($mobile + 1) {
+      padding: em(18px) em(14px);
+      @include col(1/2, $gutter: 0);
+    }
+  }
+  .description {
+    margin: {
+      bottom: em(53px);
+    }
+  }
+  .form-text {
+    padding: em(21px) em(14px);
+    @include breakpoint($mobile + 1) {
+      @include col(1/2, $gutter: 0);
+    }
+  }
+  .submit__wrapper {
+    text-align: center;
+    @include breakpoint($mobile + 1) {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/**
+ * @file
+ */
+
+a {
+  color:$color__orange--primary;
+//  line-height: 1;
+  text-decoration: none;
+  // transition: 0.5s color;
+  &:hover {
+    color: $color__orange--active !important;
+  }
+}

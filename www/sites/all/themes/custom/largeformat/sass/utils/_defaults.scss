@@ -1,0 +1,71 @@
+/**
+ * @file
+ */
+
+$max-screen-width: 800px;
+$breakpoint-to-ems: true;
+
+$mobile: 414px;
+$desktop: 960px;
+
+/**
+ * Font-sizes in pixels.
+ */
+
+$root-font-size: 10px !default;
+$base-line-height: 28px !default;
+$base-font-size: 18px !default;
+
+$font-size-logo: 27px !default;
+
+$font-size-normal: $base-font-size;
+$font-size-xxxl: 48px !default;
+$font-size-xxl: 42px !default;
+$font-size-xl: 35px !default;
+$font-size-lg: 24px !default;
+$font-size-md: 15px !default;
+$font-size-sm: 13px !default;
+
+$h1-size: 35px !default;
+$h2-size: 28px !default;
+$h3-size: 22px !default;
+$h4-size: 18px !default;
+$h5-size: $base-font-size !default;
+
+
+/**
+ * Font-family
+ */
+
+$base-font-family: 'Lora', serif !default;
+$secondary-font-family: 'Open Sans', sans-serif;
+
+
+/**
+ * Color defaults
+ */
+
+$base-color: #252525 !default;
+$base-ui-color: #EEEEEE !default;
+
+$colour__background--header: #191919;
+$color__background--dark: #555555;
+$color__background--grey: #F5F5F5;
+$color__background--white: #FDFDFD;
+$color__orange--primary: #e45738;
+$color__orange--secondary: #FD6D16;
+$color__orange--active: #F24125;
+$color__orange--dark: #DB6000;
+
+/**
+ * $BASE-SPACING
+ */
+
+/**
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+
+$base-spacing-unit: ($base-line-height - 5) !default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$quarter-spacing-unit: $base-spacing-unit / 4!default;
+$line-height-ratio: $base-line-height / $base-font-size;

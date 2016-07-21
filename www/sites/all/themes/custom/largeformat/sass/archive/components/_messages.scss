@@ -1,0 +1,49 @@
+// @file
+// Styles for Drupal messages.
+
+.messages {
+  background-repeat: no-repeat;
+  border-radius: $global-radius;
+  margin: 0;
+  padding: 1em;
+  position: relative;
+  word-wrap: break-word;
+
+  @media print {
+    background-image: none !important;
+    padding-left: 0;
+  }
+
+  em {
+    color: #000;
+  }
+}
+
+.messages__list {
+  list-style-type: none;
+  > li + li {
+    margin-top: 0;
+  }
+}
+
+.messages--status {
+  background-color: lighten($status-color, 50%);
+  color: darken($status-color, 20%);
+}
+
+.messages--warning {
+  background-color: lighten($warning-color, 40%);
+  color: darken($warning-color, 40%);
+}
+
+.messages--error {
+  background-color: lighten($error-color, 65%);
+  color: darken($error-color, 20%);
+
+  .messages__item {
+    .placeholder:first-child {
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+}

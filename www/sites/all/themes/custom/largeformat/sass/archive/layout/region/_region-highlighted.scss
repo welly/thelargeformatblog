@@ -1,0 +1,29 @@
+// @file
+
+.region-highlighted {
+  color: white;
+  margin: {
+    bottom: 1em;
+  }
+  @include breakpoint(max-width $mobile) {
+    background-color: $primary-color;
+    a {
+      color: white;
+    }
+  }
+  @include breakpoint($mobile + 1) {
+    background: {
+      image: url('../images/bg/bg-highlighted.png');
+      position: top center;
+      repeat: no-repeat;
+    }
+    .content {
+      background: {
+        image: url('../images/hero-image.png');
+        position: em(15px) em(10px);
+        repeat: no-repeat;
+      }
+      height: em(595px);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+// @file
+// Styles for Drupal's autocomplete widget.
+
+$icon-horizontal-offset: em(8px, $form-text-size);
+$icon-vertical-offset: 12px;
+$icon-throbbing-vertical-offset: -47px;
+
+#autocomplete {
+  border: 1px solid $form-border-color;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    background: #fff;
+    color: #000;
+    cursor: default;
+    margin: 0;
+    padding: 0.25em;
+    white-space: pre;
+
+    &.selected {
+      background: $selection-background;
+      color: $selection-foreground;
+    }
+  }
+}
+
+input.form-autocomplete {
+  background-image: url(../images/bg/throbber.gif);
+  background-position: right $icon-horizontal-offset top $icon-vertical-offset;
+  background-repeat: no-repeat;
+  padding-right: em(30px, $form-text-size);
+}
+
+input.throbbing {
+  background-position: right $icon-horizontal-offset top $icon-throbbing-vertical-offset;
+}

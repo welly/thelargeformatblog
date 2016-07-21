@@ -1,0 +1,20 @@
+// @file
+// Logo styling
+
+.site-name {
+  display: block;
+  padding: {
+    bottom:  1em;
+    top: 1em;
+  }
+  @include breakpoint(50em) {
+    float: left;
+    padding: {
+      top: em(40px);
+    }
+  }
+}
+
+.site-name__text {
+  display: none;
+}

@@ -1,0 +1,19 @@
+.pager {
+  margin: {
+    bottom: 2em;
+  }
+}
+.pager__item {
+  display: inline-block;
+  padding: 0 em(5px, $font-size-normal);
+  @include rem(font-size, $font-size-normal);
+  &:first-child {
+    padding-left: 0;
+  }
+}
+.pager__item--first,
+.pager__item--previous,
+.pager__item--next,
+.pager__item--last {
+  display: none;
+}

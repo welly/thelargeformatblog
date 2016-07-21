@@ -1,0 +1,61 @@
+/**
+ * @file
+ */
+
+.region--header {
+  background-color: $colour__background--header;
+  color: white;
+  @include clearfix;
+  @include breakpoint(max-width $mobile) {
+    .content {
+      padding: 0;
+    }
+  }
+  @include breakpoint($mobile + 1 $desktop - 1) {
+    .content {
+      padding: 0 1em;
+    }
+  }
+  @include breakpoint($desktop) {
+    height: em(150px, $font-size-normal);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    @include clearfix;
+    .content {
+      @include add-grid(4 10 3);
+      @include add-gutter(1/4);
+      @include add-gutter-style('split');
+    }
+  }
+  a {
+    color: white;
+  }
+}
+
+.branding {
+  @include breakpoint($desktop) {
+    @include grid-span(1, 1);
+  }
+}
+
+.main-menu {
+  @include breakpoint($mobile + 1 $desktop - 1) {
+    @include grid-span(2, 1);
+  }
+  @include breakpoint($desktop) {
+    @include grid-span(1, 2);
+  }
+}
+
+.social-media {
+  @include breakpoint($mobile + 1 $desktop - 1) {
+    text-align: right;
+    @include grid-span(1, 3);
+  }
+  @include breakpoint($desktop) {
+   @include grid-span(1, 3);
+ }
+}

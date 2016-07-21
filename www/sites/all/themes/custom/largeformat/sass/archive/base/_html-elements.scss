@@ -1,0 +1,233 @@
+// @file
+// Default styling of html elements.
+
+*,
+*:before,
+*:after {
+  @include border-box;
+}
+
+* {
+  // Universal transitions
+}
+
+html {
+  font-family: $base-font-family;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $body-color;
+  color: $primary-text-color;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  word-wrap: break-word;
+}
+
+
+
+a {
+  color: $link-color;
+  // Improves readability when focused.
+  outline-offset: em(2px);
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+abbr {
+  @include smallcaps();
+
+  &:hover {
+    cursor: help;
+  }
+}
+
+address {}
+
+article {}
+
+aside {}
+
+audio {}
+
+b {}
+
+blockquote {}
+
+// Don't style button elements, since they're often styled as links for
+// accessible widgets. Use the .button class in partials/components/buttons.
+button {}
+
+canvas {}
+
+caption {}
+
+cite {}
+
+code {}
+
+col {}
+
+colgroup {}
+
+datalist {}
+
+dd {
+  margin-bottom: 0;
+}
+
+del {}
+
+details {}
+
+dfn {}
+
+dl {
+  margin: 0;
+}
+
+dt {}
+
+em {}
+
+embed {}
+
+fieldset {}
+
+figcaption {}
+
+figure {}
+
+footer {}
+
+form {}
+
+header {}
+
+hr {
+  border: 1px solid $form-border-color;
+}
+
+i {}
+
+iframe {}
+
+img {}
+
+// Don't style button, submit, or reset elements, since they're often styled as
+// links for accessible widgets. Use the .button class in
+// partials/components/buttons.
+input {}
+input[type="button"] {}
+input[type="checkbox"] {}
+input[type="color"] {}
+input[type="date"] {}
+input[type="datetime"] {}
+input[type="datetime-local"] {}
+input[type="email"] {}
+input[type="file"] {}
+input[type="image"] {}
+input[type="month"] {}
+input[type="number"] {}
+input[type="password"] {}
+input[type="radio"] {}
+input[type="range"] {}
+input[type="reset"] {}
+input[type="search"] {}
+input[type="submit"] {}
+input[type="tel"] {}
+input[type="text"] {}
+input[type="time"] {}
+input[type="url"] {}
+input[type="week"] {}
+
+ins {}
+
+kbd {}
+
+label {}
+
+legend {}
+
+li {}
+
+main {}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+menu {}
+
+menuitem {}
+
+meter {}
+
+nav {}
+
+object {}
+
+ol {}
+
+optgroup {}
+
+option {}
+
+output {}
+
+p {}
+
+param {}
+
+pre {}
+
+progress {}
+
+q {}
+
+s {}
+
+samp {}
+
+section {}
+
+select {}
+
+small {}
+
+strong {}
+
+sub {}
+
+summary {}
+
+sup {}
+
+table {}
+
+tbody {}
+
+td {}
+
+textarea {}
+
+tfoot {}
+
+th {}
+
+thead {}
+
+time {}
+
+tr {}
+
+u {}
+
+ul {}
+
+var {}
+
+video {}

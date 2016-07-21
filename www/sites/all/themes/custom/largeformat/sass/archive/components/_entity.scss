@@ -1,0 +1,8 @@
+// @file
+// Generic styles for entities
+
+.block__title,
+.entity__title {
+  font-family: $header-font-family;
+  @include chrome-font-fix();
+}

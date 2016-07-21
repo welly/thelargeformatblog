@@ -1,0 +1,62 @@
+.node-type-page {
+  .region--main {
+    @include clearfix;
+    .content {
+      margin: {
+        top: 8em;
+      }
+    }
+  }
+}
+.page--full {
+  @extend .cf;
+  margin: {
+    bottom: 5em;
+  }
+}
+.page__header {
+  background-color: white;
+  color: $colour__background--header;
+  margin: {
+    bottom: 2em;
+  }
+  padding: {
+    bottom: 1em;
+    top: 4em;
+  }
+  width: 100%;
+  transition: 0.5s background-color;
+  z-index: 80;
+  @extend .cf;
+  @include add-grid(4 10 3);
+  @include add-gutter(1/4);
+}
+.page__title {
+  font-family: $secondary-font-family;
+  line-height: ($line-height-ratio - .25);
+  @extend .weight--bold;
+  @include breakpoint($mobile + 1) {
+    @include grid-span(2, 2);
+    @include rem(font-size, $font-size-xl);
+  }
+}
+.page__content {
+  @include clearfix;
+  @include rem(font-size, $font-size-normal);
+  @include breakpoint(max-width $mobile) {
+    padding: 0 1em;
+  }
+  @include breakpoint($mobile + 1) {
+    @include add-grid(4 10 3);
+    @include add-gutter(1/4);
+  }
+}
+.page__body {
+  @include rem(font-size, $font-size-md);
+  @include breakpoint($mobile + 1) {
+    @include rem(font-size, $font-size-normal);
+  }
+  @include breakpoint($mobile + 1) {
+    @include grid-span(1, 2);
+  }
+}

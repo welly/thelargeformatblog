@@ -1,0 +1,12 @@
+name = Largeformat Legacy Migration
+description = Custom migration for legacy data
+core = 7.x
+package = Migration
+
+dependencies[] = migrate
+
+files[] = includes/base.inc
+files[] = includes/articles.inc
+files[] = includes/categories.inc
+files[] = includes/tags.inc
+files[] = includes/users.inc

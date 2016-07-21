@@ -1,0 +1,134 @@
+// @file
+// Typography variables
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+
+$base-font-family: Arial, Helvetica, sans-serif;
+$header-font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+$monospace-font-family: Consolas, 'Lucida Console', "Liberation Mono", "Courier New", monospace, sans-serif;
+$base-font-size: 16px;
+$base-line-height: 24px;
+$font-size-xxxl: 40px;
+$font-size-xxl: 35px;
+$font-size-xl: 24px;
+$font-size-lg: 20px;
+$font-size-normal: $base-font-size;
+$font-size-md: 18px;
+$font-size-sm: 14px;
+$font-size-xs: 10px;
+
+// Buttons
+$button-font-family: $base-font-family;
+
+// Forms
+$form-text-size: $font-size-normal;
+
+// $fonts: (
+//   raleway: (
+//     family: 'Raleway',
+//     src: '../fonts/raleway/raleway-regular-webfont',
+//     font-style: normal,
+//     font-weight: normal,
+//   ),
+//   raleway-italic: (
+//     family: 'Raleway',
+//     src: '../fonts/raleway/raleway-italic-webfont',
+//     font-style: italic,
+//     font-weight: normal,
+//   ),
+//   raleway-black: (
+//     family: 'Raleway Black',
+//     src: '../fonts/raleway/raleway-black-webfont',
+//     font-style: normal,
+//     font-weight: normal,
+//   ),
+//   raleway-black-italic: (
+//     family: 'Raleway Black',
+//     src: '../fonts/raleway/raleway-blackitalic-webfont',
+//     font-style: italic,
+//     font-weight: normal,
+//   ),
+//   raleway-bold: (
+//     family: 'Raleway',
+//     src: '../fonts/raleway/raleway-bold-webfont',
+//     font-style: normal,
+//     font-weight: bold,
+//   ),
+//   raleway-bold-italic: (
+//     family: 'Raleway',
+//     src: '../fonts/raleway/raleway-bolditalic-webfont',
+//     font-style: italic,
+//     font-weight: bold,
+//   ),
+//   raleway-extrabold: (
+//     family: 'Raleway Extrabold',
+//     src: '../fonts/raleway/raleway-extrabold-webfont',
+//     font-style: normal,
+//     font-weight: normal,
+//   ),
+//   raleway-extrabold-italic: (
+//     family: 'Raleway Extrabold',
+//     src: '../fonts/raleway/raleway-extrabolditalic-webfont',
+//     font-style: italic,
+//     font-weight: normal,
+//   ),
+//   raleway-extralight: (
+//     family: 'Raleway Extra Light',
+//     src: '../fonts/raleway/raleway-extralight-webfont',
+//     font-style: normal,
+//     font-weight: normal,
+//   ),
+//   raleway-extralight-italic: (
+//     family: 'Raleway Extra Light',
+//     src: '../fonts/raleway/raleway-extralightitalic-webfont',
+//     font-style: italic,
+//     font-weight: normal,
+//   ),
+//   raleway-light: (
+//     family: 'Raleway Light',
+//     src: '../fonts/raleway/raleway-light-webfont',
+//     font-style: normal,
+//     font-weight: normal,
+//   ),
+//   raleway-light-italic: (
+//     family: 'Raleway Light',
+//     src: '../fonts/raleway/raleway-lightitalic-webfont',
+//     font-style: italic,
+//     font-weight: normal,
+//   ),
+//   raleway-medium: (
+//     family: 'Raleway Medium',
+//     src: '../fonts/raleway/raleway-medium-webfont',
+//     font-style: normal,
+//     font-weight: normal,
+//   ),
+//   raleway-medium-italic: (
+//     family: 'Raleway Medium',
+//     src: '../fonts/raleway/raleway-mediumitalic-webfont',
+//     font-style: italic,
+//     font-weight: normal,
+//   ),
+//   raleway-semibold: (
+//     family: 'Raleway Semibold',
+//     src: '../fonts/raleway/raleway-semibold-webfont',
+//     font-style: normal,
+//     font-weight: normal,
+//   ),
+//   raleway-semibold-italic: (
+//     family: 'Raleway Semibold',
+//     src: '../fonts/raleway/raleway-semibolditalic-webfont',
+//     font-style: italic,
+//     font-weight: normal,
+//   ),
+//   raleway-thin: (
+//     family: 'Raleway Thin',
+//     src: '../fonts/raleway/raleway-thin-webfont',
+//     font-style: normal,
+//     font-weight: normal,
+//   ),
+//   raleway-thin-italic: (
+//     family: 'Raleway Thin',
+//     src: '../fonts/raleway/raleway-thinitalic-webfont',
+//     font-style: italic,
+//     font-weight: normal,
+//   ),
+// );

@@ -1,0 +1,23 @@
+// @file
+// Global partials
+//
+// These partials will be shared across all CSS files and includes Compass
+// extensions, variables, functions, extendables, and mixins.
+
+@import 'global/variables/colours';
+@import 'global/variables/layout';
+@import 'global/variables/typography';
+
+//
+@import 'global/helpers/accessibility';
+@import 'global/helpers/blend-modes';
+@import 'global/helpers/border-box';
+@import 'global/helpers/clearfix';
+@import 'global/helpers/em';
+@import 'global/helpers/image-replace';
+@import 'global/helpers/smallcaps';
+@import 'global/helpers/svg-background';
+@import 'global/helpers/typography';
+
+//
+@import 'global/extendables/button';

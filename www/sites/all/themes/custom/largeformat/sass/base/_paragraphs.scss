@@ -1,0 +1,11 @@
+.read-more {
+  font-family: $secondary-font-family;
+}
+
+.region--main {
+  p {
+    letter-spacing: .01rem;
+    line-height: ($line-height-ratio + 0.2);
+    margin-bottom: calc-rem($base-spacing-unit * 2);
+  }
+}

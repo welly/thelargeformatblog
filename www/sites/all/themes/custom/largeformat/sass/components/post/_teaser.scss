@@ -1,0 +1,48 @@
+.post__teaser {
+  border: {
+    bottom: 1px solid $base-ui-color;
+  }
+  padding: {
+    bottom: 1em;
+  }
+  @include breakpoint($mobile + 1) {
+    padding: {
+      bottom: 3em;
+    }
+  }
+  margin: {
+    bottom: 2em;
+  }
+  &.last {
+    border: 0;
+  }
+
+  .post__title {
+    @include rem(font-size, $font-size-normal);
+    line-height: ($line-height-ratio - .25);
+    margin: {
+      bottom: 0.4em;
+    }
+    text-transform: uppercase;
+    @extend .weight--extrabold;
+    @include breakpoint($mobile + 1) {
+      @include rem(font-size, $font-size-lg);
+    }
+  }
+  .post__link {
+  }
+  &:last-child {
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+
+.post__summary {
+  @include rem(font-size, $font-size-md);
+  @include breakpoint($mobile + 1) {
+    @include rem(font-size, $font-size-normal);
+  }
+  p:last-child {
+    margin-bottom: 0.5em;
+  }
+}

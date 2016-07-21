@@ -1,0 +1,104 @@
+// @file
+// Styling of Signpost bean type
+
+.signpost {
+  color: white;
+  margin: {
+    bottom: 1em;
+  }
+  @include breakpoint(max-width $mobile) {
+    .wrapper {
+      text-align: center;
+    }
+  }
+  @include breakpoint($mobile + 1) {
+    .wrapper {
+      margin: {
+        bottom: 1.5em;
+        left: 2em;
+      }
+    }
+  }
+}
+.bean--signpost {
+  @include breakpoint(max-width $mobile) {
+    padding-bottom: 1em;
+  }
+}
+
+.signpost__body {
+  padding: 1em;
+  @include breakpoint($mobile + 1) {
+    padding: {
+      bottom: 1em;
+      left: 2em;
+      right: 2em;
+      top: 1em;
+    }
+  }
+}
+.signpost__title {
+  background: {
+    position: em(16px, $font-size-lg) center;
+    repeat: no-repeat;
+    size: auto 70%;
+  }
+  margin: 0;
+  padding: em(20px, $font-size-lg) 1em em(20px, $font-size-lg) em(86px, $font-size-lg);
+  text-transform: uppercase;
+  @include rem(font-size, $font-size-lg);
+  @include breakpoint($mobile + 1) {
+    background: {
+      position: em(32px, $font-size-xl) center;
+    }
+    line-height: em($font-size-xl + 4, $font-size-xl);
+    height: em(92px, $font-size-xl);
+    padding: em(20px, $font-size-xl) 1em em(20px, $font-size-xl) em(102px, $font-size-xl);
+    @include rem(font-size, $font-size-xl);
+  }
+}
+.signpost__link {
+  background-color: $primary-color;
+}
+
+.signpost--choose-storage {
+  background: {
+    color: $secondary-color;
+  }
+  .signpost__title {
+    background: {
+      color: darken($secondary-color, 10%);
+      image: url('../images/icon-signpost-choose.png');
+    }
+  }
+}
+
+.signpost--get-quote {
+  background: {
+    color: $tertiary-color;
+  }
+  position: relative;
+  .signpost__title {
+    background: {
+      color: darken($tertiary-color, 10%);
+      image: url('../images/icon-signpost-quote.png');
+    }
+    @include breakpoint($mobile + 1) {
+      line-height: 2.33334em;
+    }
+  }
+  img {
+    display: none;
+  }
+  @include breakpoint($mobile + 1) {
+    .signpost__body {
+      margin-right: 4.5em;
+    }
+    img {
+      bottom: 0;
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

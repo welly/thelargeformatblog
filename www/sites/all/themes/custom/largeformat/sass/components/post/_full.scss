@@ -1,0 +1,241 @@
+.post--full {
+  @extend .cf;
+  margin: {
+    bottom: 5em;
+  }
+  .post__title {
+    line-height: ($line-height-ratio - .25);
+    @extend .weight--bold;
+    @include breakpoint($mobile + 1) {
+      @include rem(font-size, $font-size-xl);
+    }
+  }
+  .post__content {
+    @include clearfix;
+    @include rem(font-size, $font-size-normal);
+    @include breakpoint(max-width $mobile) {
+      padding: 0 1em;
+    }
+    @include breakpoint($mobile + 1) {
+      margin-top: em(20px);
+      @include add-grid(4 10 3);
+      @include add-gutter(1/4);
+    }
+    .post-body {
+      .oembed {
+        display: block;
+        float: none;
+      }
+      div {
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .post__fancybox {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    span {
+      background-color: rgba(128, 128, 128, 0.7);
+      border-radius: 3px;
+      bottom: 1em;
+      color: white;
+      display: block;
+      font-family: $secondary-font-family;
+      font-weight: $semibold;
+      right: 1em;
+      padding: em(6px) em(8px);
+      position: absolute;
+      text-transform: uppercase;
+      @include rem(font-size, $font-size-md);
+    }
+  }
+  .post-header {
+    background-color: white;
+    color: $colour__background--header;
+    margin: {
+      bottom: 2em;
+    }
+    padding: {
+      bottom: 1em;
+      top: 1em;
+    }
+    width: 100%;
+    transition: 0.5s background-color;
+    z-index: 80;
+    @extend .cf;
+    @include add-grid(4 10 3);
+    @include add-gutter(1/4);
+    @include breakpoint($desktop) {
+      height: em(325px);
+    }
+  }
+  .post-header--stuck {
+    background-color: rgba(255, 255, 255, 0.95);
+    bottom: auto;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+    padding-top: 2em;
+    position: fixed;
+    top: 0;
+    @include breakpoint($desktop) {
+      padding-top: em(70px);
+      top: em(110px);
+    }
+    .content {
+      @include grid-span(2, 2);
+    }
+    .post__categories,
+    .post__tags {
+      color: $colour__background--header;
+      display: block;
+      margin: {
+          bottom: 0;
+      }
+      @include breakpoint(max-width $mobile) {
+        margin: {
+          left: em(18px, $font-size-normal);
+          right: em(18px, $font-size-normal);
+        }
+      }
+    }
+  }
+  .post-body {
+    @include rem(font-size, $font-size-md);
+    @include breakpoint($mobile + 1) {
+      padding: 0 1em;
+      @include rem(font-size, $font-size-normal);
+    }
+    @include breakpoint($desktop) {
+      padding: 0;
+      @include grid-span(1, 2);
+    }
+    &.regular {
+      margin-top: 2em;
+    }
+    ul {
+      margin: {
+        bottom: 1em;
+      }
+      li {
+        display: list-item;
+        list-style-type: disc !important;
+        margin: {
+          bottom: 0.5em;
+          left: 1em;
+        }
+      }
+    }
+  }
+  .post__title {
+    line-height: ($line-height-ratio - .25);
+    @extend .weight--bold;
+    @include breakpoint($mobile + 1) {
+      @include rem(font-size, $font-size-lg);
+    }
+  }
+  .post__byline {
+    color: $colour__background--header;
+    margin: {
+      bottom: 0;
+    }
+    @include breakpoint(max-width $mobile) {
+      margin: {
+        left: em(18px, $font-size-normal);
+        right: em(18px, $font-size-normal);
+      }
+    }
+  }
+  .post__title {
+    transition: 0.5s all;
+    @include breakpoint(max-width $mobile) {
+      margin: 0 em(18px, $font-size-normal);
+      @include rem(font-size, $font-size-normal);
+    }
+  }
+  .post-header__flag {
+    @extend .cf;
+    .post-portrait {
+      @include breakpoint(max-width $mobile) {
+        display: none;
+      }
+    }
+
+    @include breakpoint($mobile + 1) {
+      padding: 0 1em;
+      @include layout(2 12, $gutter: 1/4) {
+        .post-portrait {
+          @include grid-span(1, 1);
+        }
+        .post-header__body {
+          @include grid-span(1, 2);
+        }
+      }
+    }
+    @include breakpoint($desktop) {
+      padding: 0;
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+.post--event {
+  .post-header__flag {
+    @extend .cf;
+
+    @include breakpoint($mobile + 1) {
+      padding: 0 1em;
+      @include layout(2 12, $gutter: 1/4) {
+        .post-header__body {
+          @include grid-span(2, 1);
+        }
+      }
+    }
+    @include breakpoint($desktop) {
+      padding: 0;
+      @include grid-span(1, 2);
+    }
+  }
+}
+
+
+.post__cover {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin: 0 auto 3em auto;
+  max-height: 1000px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    width: 100%;
+  }
+  &.twentyfive:before {
+    padding-bottom: 25%;
+  }
+  &.thirty:before {
+    padding-bottom: 30%;
+  }
+  &.forty:before {
+    padding-bottom: 40%;
+  }
+  &.fifty:before {
+    padding-bottom: 50%;
+  }
+  &.seventyfive:before {
+    padding-bottom: 75%;
+  }
+}
+.post__cover--regular {
+  @include clearfix;
+}
+.post__image--regular {
+  max-height: em(350px);
+}

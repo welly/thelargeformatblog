@@ -1,0 +1,21 @@
+.region--main {
+  @include breakpoint($desktop) {
+    margin: {
+      top: em(40px);
+    }
+  }
+  @include breakpoint(max-width $desktop - 1) {
+    .post-teasers {
+      padding: 2em 1em 0 1em;
+    }
+  }
+  @include breakpoint($desktop) {
+    @include add-grid(4 10 3);
+    @include add-gutter-style('split');
+    @include add-gutter(1/4);
+    .post-teasers {
+      @include grid-span(1, 2);
+    }
+  }
+  @include clearfix;
+}

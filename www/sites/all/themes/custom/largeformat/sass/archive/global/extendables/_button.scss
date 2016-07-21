@@ -1,0 +1,43 @@
+// @file
+// Button helpers
+
+@mixin button($bg-color: $button-bg-color, $text-color: $secondary-color) {
+  background-color: $bg-color;
+  border-radius: $global-radius;
+  border: 1px solid $secondary-color;
+  box-sizing: border-box;
+  color: $secondary-color;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  height: 38px;
+  letter-spacing: .1rem;
+  line-height: 38px;
+  padding: 0 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:focus,
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+    color: white;
+  }
+
+  &:active {
+  background-color: darken($primary-color, 10%);
+  border-color: darken($primary-color, 10%);
+  color: white;
+  }
+}
+
+%button {
+  @include button();
+
+  & + & {
+    margin-left: 1em;
+  }
+}

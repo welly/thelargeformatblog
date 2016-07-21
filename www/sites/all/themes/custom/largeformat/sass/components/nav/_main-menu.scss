@@ -1,0 +1,54 @@
+.main-menu {
+  font-family: $secondary-font-family;
+  .nav__list {
+    @include breakpoint(max-width $mobile) {
+      display: none;
+      margin-bottom: em(32px, $font-size-md);
+    }
+    @include breakpoint($mobile + 1) {
+      @include nav;
+    }
+  }
+  .nav__item {
+    text-transform: uppercase;
+    @extend .weight--extrabold;
+    @include rem(font-size, $font-size-md);
+    @include breakpoint(max-width $mobile) {
+      padding: {
+        top: em(8px, $font-size-md);
+        bottom: em(8px, $font-size-md);
+      }
+    }
+    @include breakpoint($mobile + 1) {
+      margin: {
+        right: em(14px);
+      }
+      padding: {
+        top: em(24px, $font-size-normal);
+      }
+    }
+  }
+  .nav__link {
+    transition: 0.25s color;
+    &.active {
+      color: $color__orange--active;
+    }
+  }
+  @include breakpoint(max-width $mobile) {
+    background-color: $colour__background--header;
+    color: white;
+    bottom: 0;
+    padding: em(20px, $font-size-md) 1em;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.main-menu__toggle {
+  float: right;
+  margin-right: em(12px, $h2-size);
+  @include rem(font-size, $h2-size);
+  @include breakpoint($mobile + 1) {
+    display: none;
+  }
+}

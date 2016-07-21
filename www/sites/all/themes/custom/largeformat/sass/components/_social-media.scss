@@ -1,0 +1,49 @@
+.social-media {
+  @include breakpoint(max-width $mobile) {
+    bottom: em(16px);
+    margin-left: em(30px, $font-size-normal);
+    position: fixed;
+  }
+}
+.social-media__list {
+  @include nav;
+}
+.social-media__item {
+  @include breakpoint(max-width $mobile) {
+    margin: {
+      right: em(8px, $font-size-sm);
+    }
+  }
+  @include breakpoint($mobile + 1) {
+    margin: {
+      right: em(10px, $font-size-lg);
+    }
+    padding: {
+      top: em(20px, $font-size-lg);
+    }
+  }
+  @include rem(font-size, $font-size-lg);
+}
+.social-media__link {
+}
+.social-media__title {
+  display: none;
+}
+
+.sharethis-wrapper {
+  margin: {
+    bottom: 1em;
+  }
+  .chicklets {
+    height: 22px !important;
+  }
+  .stArrow {
+    height: 22px !important;
+  }
+  .stButton_gradient {
+    height: 22px !important;
+  }
+  .stMainServices {
+    height: 25px !important;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "possum",
+  "version": "0.0.2",
+  "authors": [
+    "Alastair Moore <alastair@captovate.com.au>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jeet.gs": "~6.1.2"
+  },
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}

@@ -1,0 +1,29 @@
+/**
+ * @file
+ *
+ * As per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ *
+ * Extend this clearfix class with Sass
+ */
+.cf{
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+@mixin clearfix {
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%clearfix {
+  @include clearfix;
+}

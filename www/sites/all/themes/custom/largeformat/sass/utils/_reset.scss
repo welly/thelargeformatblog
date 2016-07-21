@@ -1,0 +1,150 @@
+*{
+  &,
+  &:before,
+  &:after{
+    -moz-osx-font-smoothing: grayscale;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+}
+
+iframe {
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+dl,
+dd,
+form,
+fieldset,
+legend,
+caption,
+table,
+th,
+td,
+hr,
+blockquote,
+figure,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  li {
+    display: block;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-size: inherit;
+}
+
+img {
+  border: 0;
+  font-style:italic;
+  height: auto;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: bold;
+}
+sup {
+  position: relative;
+  top: -.5em;
+  font-size: 65%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+abbr[title],
+dfn[title]{
+  cursor:help;
+}
+
+abbr[title] {
+  text-decoration:none;
+  border: none;
+}
+
+a,
+u,
+ins{
+  text-decoration: none;
+}
+
+ins{
+  border-bottom: 1px solid;
+}
+
+fieldset {
+  border: none;
+}
+
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor:pointer;
+}
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none;
+}
+
+a,
+button {
+  color: inherit;
+}
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
+  -webkit-font-smoothing: inherit;
+  &:focus {
+    outline: 0;
+  }
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
