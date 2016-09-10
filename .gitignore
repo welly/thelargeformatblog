@@ -3,3 +3,5 @@ log
 private
 /vendor
 /.vagrant
+/composer.lock
+.DS_Store
