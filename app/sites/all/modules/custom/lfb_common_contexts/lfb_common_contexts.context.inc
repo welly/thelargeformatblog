@@ -94,6 +94,12 @@ function lfb_common_contexts_context_default_contexts() {
           'region' => 'content',
           'weight' => '-9',
         ),
+        'views-author_content-block' => array(
+          'module' => 'views',
+          'delta' => 'author_content-block',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
       ),
     ),
   );
@@ -152,6 +158,7 @@ function lfb_common_contexts_context_default_contexts() {
     'views' => array(
       'values' => array(
         'events:page' => 'events:page',
+        'portfolio:page' => 'portfolio:page',
         'tags:page' => 'tags:page',
       ),
     ),

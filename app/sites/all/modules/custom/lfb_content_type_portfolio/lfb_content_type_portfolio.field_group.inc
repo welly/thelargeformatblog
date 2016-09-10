@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function lfb_content_type_portfolio_field_group_info() {
-  $field_groups = array();
+  $export = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -39,7 +39,7 @@ function lfb_content_type_portfolio_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_media|node|portfolio|form'] = $field_group;
+  $export['group_media|node|portfolio|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -67,12 +67,7 @@ function lfb_content_type_portfolio_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_metadata|node|portfolio|form'] = $field_group;
+  $export['group_metadata|node|portfolio|form'] = $field_group;
 
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Media');
-  t('Metadata');
-
-  return $field_groups;
+  return $export;
 }

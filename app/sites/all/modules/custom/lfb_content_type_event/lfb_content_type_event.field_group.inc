@@ -57,9 +57,9 @@ function lfb_content_type_event_field_group_info() {
       1 => 'field_address',
       2 => 'field_event_type',
       3 => 'field_tags',
-      4 => 'field_author',
-      5 => 'field_date',
-      6 => 'field_link',
+      4 => 'field_date',
+      5 => 'field_link',
+      6 => 'field_venue',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

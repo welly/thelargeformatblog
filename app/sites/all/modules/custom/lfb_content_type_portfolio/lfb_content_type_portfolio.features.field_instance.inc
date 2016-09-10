@@ -10,7 +10,7 @@
 function lfb_content_type_portfolio_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-portfolio-body'.
+  // Exported field_instance: 'node-portfolio-body'
   $field_instances['node-portfolio-body'] = array(
     'bundle' => 'portfolio',
     'default_value' => NULL,
@@ -66,7 +66,7 @@ function lfb_content_type_portfolio_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-portfolio-field_author'.
+  // Exported field_instance: 'node-portfolio-field_author'
   $field_instances['node-portfolio-field_author'] = array(
     'bundle' => 'portfolio',
     'deleted' => 0,
@@ -127,7 +127,7 @@ function lfb_content_type_portfolio_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-portfolio-field_image'.
+  // Exported field_instance: 'node-portfolio-field_image'
   $field_instances['node-portfolio-field_image'] = array(
     'bundle' => 'portfolio',
     'deleted' => 0,
@@ -219,7 +219,7 @@ function lfb_content_type_portfolio_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-portfolio-field_image_full'.
+  // Exported field_instance: 'node-portfolio-field_image_full'
   $field_instances['node-portfolio-field_image_full'] = array(
     'bundle' => 'portfolio',
     'default_value' => array(
@@ -274,7 +274,7 @@ function lfb_content_type_portfolio_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-portfolio-field_image_height'.
+  // Exported field_instance: 'node-portfolio-field_image_height'
   $field_instances['node-portfolio-field_image_height'] = array(
     'bundle' => 'portfolio',
     'default_value' => array(
@@ -327,7 +327,7 @@ function lfb_content_type_portfolio_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-portfolio-field_image_hide'.
+  // Exported field_instance: 'node-portfolio-field_image_hide'
   $field_instances['node-portfolio-field_image_hide'] = array(
     'bundle' => 'portfolio',
     'default_value' => NULL,
@@ -377,7 +377,7 @@ function lfb_content_type_portfolio_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-portfolio-field_images'.
+  // Exported field_instance: 'node-portfolio-field_images'
   $field_instances['node-portfolio-field_images'] = array(
     'bundle' => 'portfolio',
     'deleted' => 0,
@@ -464,7 +464,7 @@ function lfb_content_type_portfolio_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-portfolio-field_tags'.
+  // Exported field_instance: 'node-portfolio-field_tags'
   $field_instances['node-portfolio-field_tags'] = array(
     'bundle' => 'portfolio',
     'default_value' => NULL,

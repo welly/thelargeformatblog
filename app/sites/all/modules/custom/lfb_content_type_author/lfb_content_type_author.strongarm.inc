@@ -148,7 +148,7 @@ function lfb_content_type_author_strongarm() {
       'display' => array(
         'sharethis' => array(
           'default' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),

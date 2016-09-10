@@ -14,7 +14,7 @@ function lfb_content_type_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_event';
-  $strongarm->value = 'edit-fb-post-settings';
+  $strongarm->value = 'edit-scheduler';
   $export['additional_settings__active_tab_event'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -71,7 +71,11 @@ function lfb_content_type_event_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__event';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'promo' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
@@ -82,6 +86,12 @@ function lfb_content_type_event_strongarm() {
         ),
         'xmlsitemap' => array(
           'weight' => '7',
+        ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'redirect' => array(
+          'weight' => '30',
         ),
       ),
       'display' => array(),
@@ -109,6 +119,7 @@ function lfb_content_type_event_strongarm() {
   $strongarm->name = 'node_options_event';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'promote',
   );
   $export['node_options_event'] = $strongarm;
 
@@ -150,6 +161,7 @@ function lfb_content_type_event_strongarm() {
     'rss' => 0,
     'search_index' => 0,
     'search_result' => 0,
+    'scs' => 0,
     'promo' => 0,
     'email_plain' => 0,
     'email_html' => 0,

@@ -3,6 +3,7 @@ description = Content Type: Portfolio
 core = 7.x
 package = Large Format Blog
 version = 7.x-1.0
+project = lfb_content_type_portfolio
 dependencies[] = blockify
 dependencies[] = context
 dependencies[] = disqus
