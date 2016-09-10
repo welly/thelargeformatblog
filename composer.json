@@ -1,5 +1,19 @@
 {
-    "require": {
-        "drush/drush": "^8.1"
-    }
+  "require": {
+    "drush/drush":                     "7.*",
+    "sajari/sajari-sdk-php":           "dev-master"
+  },
+  "require-dev": {
+    "drupal/drupal-extension":         "*",
+    "phpunit/phpunit":                 "*",
+    "squizlabs/php_codesniffer":       "*",
+    "phpmd/phpmd":                     "*",
+    "phploc/phploc":                   "*",
+    "sebastian/phpcpd":                "*",
+    "drupal/coder":                    "*"
+  },
+  "minimum-stability": "dev",
+  "config": {
+    "bin-dir": "bin/"
+  }
 }
