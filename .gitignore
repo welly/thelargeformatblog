@@ -1,6 +1,7 @@
 files
 log
 private
+/bin
 /vendor
 /.vagrant
 /composer.lock
