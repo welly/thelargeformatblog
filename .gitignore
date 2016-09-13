@@ -6,3 +6,4 @@ private
 /.vagrant
 /composer.lock
 .DS_Store
+settings.*.php

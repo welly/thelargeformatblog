@@ -1,9 +1,11 @@
 <?php
 
-$aliases['local'] = array(
+$aliases['dev'] = array(
     'env' => 'dev',
-    'root' => '/vagrant/app',
-    'uri' => 'thelargeformatblog.dev',
+    'root' => '/var/www/sites/thelargeformatblog.com/current/www',
+    'remote-host' => 'naboo.welly.space',
+    'remote-user' => 'www-data',
+    'uri' => 'largeformatblog.dev.welly.space',
     'path-aliases' => array(
         '%files' => 'sites/default/files',
     ),
@@ -19,5 +21,3 @@ $aliases['prod'] = array(
         '%files' => 'sites/default/files',
     ),
 );
-
-$options['shell-aliases']['pull-files'] = '!drush rsync @largeformat.prod:%files/ @largeformat.local:%files';
