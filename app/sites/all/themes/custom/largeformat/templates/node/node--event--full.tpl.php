@@ -64,8 +64,10 @@ $link = l($title, drupal_get_path_alias('node/' . $node->nid), array('attributes
       </figure>
       <div class="post-header__body">
         <h2 class="post__title"><?php echo $title; ?></h2>
-        <p class="post__type"><?php echo $event_type->name; ?></p>
-        <?php if (count($tags)) { ?><p class="post__tags">Tagged with <?php echo $tags; ?></p><?php } ?>
+        <div class="post__meta">
+          <p class="post__type"><?php echo $event_type->name; ?></p>
+          <?php if (count($tags)) { ?><p class="post__tags">Tagged with <?php echo $tags; ?></p><?php } ?>
+        </div>
       </div>
     </div>
   </header>
@@ -80,8 +82,8 @@ $link = l($title, drupal_get_path_alias('node/' . $node->nid), array('attributes
       <?php } ?>
       <?php echo $content['sharethis']['#value']; ?>
       <?php echo $body; ?>
-      <?php 
-        if($dates) { 
+      <?php
+        if($dates) {
           echo implode('', $dates);
         }
       ?>

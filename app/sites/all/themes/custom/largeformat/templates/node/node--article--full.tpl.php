@@ -62,9 +62,11 @@ $link = l($title, drupal_get_path_alias('node/' . $node->nid), array('attributes
       </figure>
       <div class="post-header__body">
         <h2 class="post__title"><?php echo $title; ?></h2>
-        <p class="post__byline">By <?php echo $author_link; ?> on <time class="post__date"><?php echo $date; ?></time></p>
-        <p class="post__categories">Posted in <?php echo $categories; ?></p>
-        <?php if (count($tags)) { ?><p class="post__tags">Tagged with <?php echo $tags; ?></p><?php } ?>
+        <div class="post__meta">
+          <p class="post__byline">By <?php echo $author_link; ?> on <time class="post__date"><?php echo $date; ?></time></p>
+          <p class="post__categories">Posted in <?php echo $categories; ?></p>
+          <?php if (count($tags)) { ?><p class="post__tags">Tagged with <?php echo $tags; ?></p><?php } ?>
+        </div>
       </div>
     </div>
   </header>

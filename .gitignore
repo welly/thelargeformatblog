@@ -1,3 +1,5 @@
+.DS_Store
+.sass-cache
 files
 log
 private
@@ -5,5 +7,4 @@ private
 /vendor
 /.vagrant
 /composer.lock
-.DS_Store
 settings.*.php

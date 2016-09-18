@@ -13,6 +13,13 @@
   @include rem(font-size, $font-size-md);
 }
 
+.post__meta {
+  display: none;
+  @include breakpoint($desktop) {
+    display: block;
+  }
+}
+
 .post__date {
   font-style: italic;
 }
