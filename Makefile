@@ -29,8 +29,13 @@ maintenance-on:
 maintenance-off:
 	drush -r ${APP_ROOT} vset site_offline 0 -y
 
-sync:
-	drush @largeformat.dev sql-dump > /tmp/db.sql && drush sql-cli -r ${APP_ROOT} < /tmp/db.sql
+sync: sync-prod
+
+sync-prod:
+	drush @largeformat.prod sql-dump > /tmp/db.sql && drush sql-cli -r ${APP_ROOT} < /tmp/db.sql
+
+sync-dev:
+	drush @largeformat.prod sql-dump > /tmp/db.sql && drush sql-cli -r ${APP_ROOT} < /tmp/db.sql
 
 features-revert:
 	drush -r ${APP_ROOT} fra -y
