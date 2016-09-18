@@ -2,7 +2,7 @@
 
 $aliases['dev'] = array(
     'env' => 'dev',
-    'root' => '/var/www/sites/thelargeformatblog.com/current/www',
+    'root' => '/var/www/sites/thelargeformatblog.com/current/app',
     'remote-host' => 'naboo.welly.space',
     'remote-user' => 'www-data',
     'uri' => 'largeformatblog.dev.welly.space',
@@ -13,7 +13,7 @@ $aliases['dev'] = array(
 
 $aliases['prod'] = array(
     'env' => 'prod',
-    'root' => '/var/www/sites/thelargeformatblog.com/current/www',
+    'root' => '/var/www/sites/thelargeformatblog.com/current/app',
     'remote-host' => 'skywalker.welly.space',
     'remote-user' => 'www-data',
     'uri' => 'thelargeformatblog.com',
